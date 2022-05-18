@@ -1,0 +1,18 @@
+require "test_helper"
+
+class BookesControllerTest < ActionDispatch::IntegrationTest
+  test "should get new" do
+    get bookes_new_url
+    assert_response :success
+  end
+
+  test "should get index" do
+    get bookes_index_url
+    assert_response :success
+  end
+
+  test "should get show" do
+    get bookes_show_url
+    assert_response :success
+  end
+end
