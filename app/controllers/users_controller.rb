@@ -1,10 +1,18 @@
 class UsersController < ApplicationController
   def index
+    @users = User.all
+    @user = User.new
+    @book = Book.new
+  end
+
+  def create
+    @user = User.new(user_params)
+    @user.save
+    redirect_to user_path(@user.id)
   end
 
   def show
     @user = User.find(params[:id])
-    @post_images = @user.post_images.page(params[:page])
   end
 
   def edit
