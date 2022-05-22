@@ -1,19 +1,11 @@
-class BookesController < ApplicationController
+class BooksController < ApplicationController
 
   def index
     @books = Book.all
     @book = Book.new
-    @user = User.new
   end
 
   def creste
-    @book = Book.new(book_params)
-    @book.user_id = current_user.id
-    @book.save
-    redirect_to book_path(@book.id)
-  end
-
-  def create_table
     @book = Book.new(book_params)
     @book.user_id = current_user.id
     @book.save
