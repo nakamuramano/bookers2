@@ -1,8 +1,16 @@
 class BookesController < ApplicationController
+
   def index
-    @bookers = Book.all
+    @books = Book.all
     @book = Book.new
     @user = User.new
+  end
+
+  def creste
+    @book = Book.new(book_params)
+    @book.user_id = current_user.id
+    @book.save
+    redirect_to book_path(@book.id)
   end
 
   def create_table
