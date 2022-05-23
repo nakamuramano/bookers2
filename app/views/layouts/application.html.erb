@@ -22,7 +22,7 @@
           <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
               <li class="nav-item active nav-link text-light">
-                 <i class="fas fa-house-chimney"></i><%= link_to "Home", users_path(current_user.id), class: ' text-light' %>
+                 <i class="fas fa-home"></i><%= link_to "Home", users_path(current_user.id), class: ' text-light' %>
               </li>
               <li class="nav-item nav-link text-light">
                 <i class="fas fa-users"></i><%= link_to "User", users_path, class: 'text-light' %>
@@ -31,13 +31,13 @@
                 <i class="fas fa-book-open"></i><%= link_to "Books", books_path, class: 'text-light' %>
               </li>
               <li class="nav-item nav-link text-light">
-                <i class="fas fa-right-from-bracket"></i><%= link_to "Log out", destroy_user_session_path, method: :delete, class: ' text-light' %>
+                <i class="fas fa-sign-out-alt"></i><%= link_to "Log out", destroy_user_session_path, method: :delete, class: ' text-light' %>
               </li>
 
             <% else %>
 
               <li class="nav-item nav-link text-light">
-                <i class="fas fa-house-chimney"></i><%= link_to "Home", root_path, class: 'text-light' %>
+                <i class="fas fa-home"></i><%= link_to "Home", root_path, class: 'text-light' %>
               </li>
               <li class="nav-item nav-link text-light">
                 <i class="fas fa-link"></i><%= link_to "About", homes_about_path, class: 'text-light' %>
@@ -46,7 +46,7 @@
                 <i class="fas fa-user-plus"></i></i><%= link_to "sign up", new_user_registration_path, class: ' text-light' %>
               </li>
               <li class="nav-item nav-link text-light">
-                <i class="fas fa-right-to-bracket"></i><%= link_to "Log in", new_user_session_path, class: ' text-light' %>
+                <i class="fas fa-sign-in-alt"></i><%= link_to "Log in", new_user_session_path, class: ' text-light' %>
               </li>
             <% end %>
             </ul>
