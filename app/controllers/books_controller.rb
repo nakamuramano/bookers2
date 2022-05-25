@@ -1,10 +1,9 @@
 class BooksController < ApplicationController
 
   def index
-    @books = Book.all
     @book = Book.new
-    @user = current_user.id
-
+    @books = Book.all
+    @user = current_user
   end
 
   def creste
