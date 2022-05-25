@@ -1,2 +1,85 @@
-<h1>Bookes#index</h1>
-<p>Find me in app/views/bookes/index.html.erb</p>
+ <main>
+  <p id="notice"></p>
+  <div class='container px-5 px-sm-0'>
+
+    <div class='row'>
+      <div class='col-md-3'>
+        <h2>User info</h2>
+
+        <table class='table'>
+          <%= form_with model: @user do |f| %>
+          <tr><%= image_tag @user.get_profile_image(100,100) %></tr>
+          <tr>
+	          <th>name</th>
+	            <th><%= text_field :name %></th>
+            </tr>
+          <tr>
+	        <th>introduction</th>
+	          <th><%= text_area :introduction %></th>
+          </tr>
+          <% end %>
+        </table>
+
+        <div class='row'>
+          <a class="btn btn-outline-secondary btn-block edit_user_13717" href="/users/13717/edit">
+          <i class="fas fa-user-cog"></i>
+        </a></div>
+
+      <h2 class="mt-3">New book</h2>
+        <%= form_with model: @book do |f| %>
+          <div class="form-group">
+            <label for="book_title">Title</label>
+            <%= f.text_field :title %>
+          </div>
+          <div class="form-group">
+            <label for="book_opinion">Opinion</label>
+            <%= f.text_area :body %>
+          </div>
+          <div class="form-group">
+          </div>
+    </div>
+
+
+
+
+
+
+    <div class='col-md-8 offset-md-1'>
+      <h2>Books</h2>
+      <table class='table table-hover table-inverse'>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Opinion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><a href="/users/13713">
+          <img src="https://bookers-level2.herokuapp.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamFYIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--83154fe448d9b1020a1adc2bfe998330aaa52021/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVZWcFZRPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596aecbd1e45058af6bad2ccaa755120cd0daa59/default-image.jpg" />
+</a>        </td>
+        <td><a class="book_10251" href="/books/10251">リーダブルコード</a></td>
+        <td>より良いコードを書くためのシンプルで実践的なテクニック。</td>
+      </tr>
+      <tr>
+        <td><a href="/users/13714">
+          <img src="https://bookers-level2.herokuapp.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamlYIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2929fdeda5d199de58eafa9eca70e03b57e4d194/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVZWcFZRPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596aecbd1e45058af6bad2ccaa755120cd0daa59/default-image.jpg" />
+</a>        </td>
+        <td><a class="book_10252" href="/books/10252">トラブル知らずのシステム設計</a></td>
+        <td>システム設計の要点を図解で説明してくれます。</td>
+      </tr>
+      <tr>
+        <td><a href="/users/13715">
+          <img src="https://bookers-level2.herokuapp.com/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBanFYIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e5e7b6dcfd38e8d2ea7de7498489ae3e2b96b449/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVZWcFZRPT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--596aecbd1e45058af6bad2ccaa755120cd0daa59/default-image.jpg" />
+</a>        </td>
+        <td><a class="book_10253" href="/books/10253">たのしいRuby</a></td>
+        <td>Rubyの入門におすすめです。</td>
+      </tr>
+  </tbody>
+</table>
+    </div>
+  </div>
+</div>
+      </main>
