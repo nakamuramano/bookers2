@@ -6,7 +6,7 @@ class BooksController < ApplicationController
     @user = current_user
   end
 
-  def creste
+  def create
     @book = Book.new(book_params)
     @book.user_id = current_user.id
     @book.save
@@ -24,7 +24,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permeit(:title,:body,:image)
+    params.require(:book).permit(:title,:body)
   end
 
 end
