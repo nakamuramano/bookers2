@@ -1,0 +1,26 @@
+<main>
+        <p id="notice"></p>
+        <div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+  		<h1>Editing Book</h1>
+    	
+  		<form action="/books/10929" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="patch" autocomplete="off" /><input type="hidden" name="authenticity_token" value="rKOjzE-g1aX2Mv_Sz3Pbv7oD876CFGNks_bI_tkIcA3DwrGLHZ3kFB2AgcOr_EYAythMbxIpmj9VXUxBBycjUw" autocomplete="off" />
+  <div class="form-group">
+    <label for="book_title">Title</label>
+    <input class="form-control book_title" type="text" value="3" name="book[title]" id="book_title" />
+  </div>
+  <div class="form-group">
+    <label for="book_opinion">Opinion</label>
+    <textarea class="form-control book_body" name="book[body]" id="book_body">
+3</textarea>
+  </div>
+  <div class="form-group">
+    <input type="submit" name="commit" value="Update Book" class="btn btn-success" data-disable-with="Update Book" />
+  </div>
+</form>
+  		<a class="book_10929" href="/books/10929">Show</a> |
+  		<a class="back" href="/books">Back</a>
+  </div>
+</div>
+ </main>
