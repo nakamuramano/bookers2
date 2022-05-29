@@ -7,7 +7,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user_id = User.find(params[:id])
+    @books = @user_id.books
+    @user = current_user
+    @book = Book.new
+
   end
 
   def edit
