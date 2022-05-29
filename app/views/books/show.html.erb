@@ -29,7 +29,7 @@
                   <% end %>
                 </td>
                 <td>
-                  <%= link_to books_path do %>
+                  <%= link_to book_path(@book_id), method: :delete do %>
                   <button type="button" class="btn btn-danger btn-sm">Destroy</button>
                   <% end %>
                 </td>
