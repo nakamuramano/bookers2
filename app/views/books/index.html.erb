@@ -1,23 +1,20 @@
-
 <main>
   <p id="notice"></p>
   <div class='container px-5 px-sm-0'>
     <% if @book.errors.any? %>
-    <h3><%= @book.errors.count %>errors prohibited this book from being saved:</h3>
-     <ul>
-      <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-     </ul>
+      <h3><%= @book.errors.count %>errors prohibited this book from being saved:</h3>
+      <ul>
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
     <% end %>
 
 
     <div class='row'>
-
       </br><%= render 'list', book: @book, user: @user %>
-
-    <div class='col-md-8 offset-md-1'>
-      <h2>Books</h2>
+      <div class='col-md-8 offset-md-1'>
+        <h2>Books</h2>
         <table class='table table-hover table-inverse'>
           <thead>
             <tr>
@@ -28,7 +25,7 @@
             </tr>
           </thead>
           <tbody>
-           <% @books.each do |book| %>
+            <% @books.each do |book| %>
               <tr>
                 <td>
                   <%= link_to user_path(book.user.id) do %>
@@ -46,11 +43,11 @@
             <% end %>
           </tbody>
         </table>
-    </div>
+      </div>
     </div>
 　</div>
 
- </main>
+</main>
 
 
 

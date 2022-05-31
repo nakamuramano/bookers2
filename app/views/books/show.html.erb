@@ -2,43 +2,37 @@
   <p id="notice"></p>
   <div class='container px-5 px-sm-0'>
     <div class='row'>
-    <%= render 'books/list', book: @book, user: @user %>
-
-    <div class='col-md-8 offset-md-1'>
-      <h2>Books detail</h2>
-        <table class='table table-hover table-inverse'><tbody>
-              <tr>
-                <td>
-                  <%= link_to user_path(@book_id.user.id) do %>
-                   <%= image_tag @book_id.user.get_profile_image(100,100) %></br>
-                   <%= @book_id.user.name %>
-                  <% end %>
-                </td>
-
-                <td>
-                  <%= link_to book_path(@book_id.id) do %>
-                    <%= @book_id.title %>
-                  <% end %>
-                </td>
-                <td><%= @book_id.body %></td>
-
+      <%= render 'books/list', book: @book, user: @user %>
+        <div class='col-md-8 offset-md-1'>
+          <h2>Books detail</h2>
+          <table class='table table-hover table-inverse'><tbody>
+          <tr>
+            <td>
+              <%= link_to user_path(@book_id.user.id) do %>
+                <%= image_tag @book_id.user.get_profile_image(100,100) %></br>
+                <%= @book_id.user.name %>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to book_path(@book_id.id) do %>
+                <%= @book_id.title %>
+              <% end %>
+            </td>
+            <td><%= @book_id.body %></td>
             <% if @book_id.user == current_user %>
-                <td>
-                  <%= link_to edit_book_path(@book_id.id) do %>
-                   <button type="button" class="btn btn-success btn-sm">Edit</button>
-                  <% end %>
-                </td>
-                <td>
-                  <%= link_to book_path(@book_id), method: :delete do %>
+              <td>
+                <%= link_to edit_book_path(@book_id.id) do %>
+                  <button type="button" class="btn btn-success btn-sm">Edit</button>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to book_path(@book_id), method: :delete do %>
                   <button type="button" class="btn btn-danger btn-sm">Destroy</button>
-                  <% end %>
-                </td>
-              </tr>
+                <% end %>
+              </td>
             <% end %>
-          </tbody>
-        </table>
-    </div>
+          </tr>
+        </div>
     </div>
 　</div>
-
- </main>
+</main>
