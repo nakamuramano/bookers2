@@ -114,7 +114,7 @@ Userモデルのテスト
   自分の投稿詳細画面のテスト
     表示内容の確認
 [32m      URLが正しい[0m
-[31m      「Book detail」と表示される (FAILED - 1)[0m
+[32m      「Book detail」と表示される[0m
 [32m      ユーザ画像・名前のリンク先が正しい[0m
 [32m      投稿のtitleが表示される[0m
 [32m      投稿のopinionが表示される[0m
@@ -149,13 +149,13 @@ Userモデルのテスト
     編集成功のテスト
 [32m      titleが正しく更新される[0m
 [32m      bodyが正しく更新される[0m
-[31m      リダイレクト先が、更新した投稿の詳細画面になっている (FAILED - 2)[0m
+[32m      リダイレクト先が、更新した投稿の詳細画面になっている[0m
   ユーザ一覧画面のテスト
     表示内容の確認
 [32m      URLが正しい[0m
 [32m      自分と他人の画像が表示される: fallbackの画像がサイドバーの1つ＋一覧(2人)の2つの計3つ存在する[0m
 [32m      自分と他人の名前がそれぞれ表示される[0m
-[31m      自分と他人のshowリンクがそれぞれ表示される (FAILED - 3)[0m
+[31m      自分と他人のshowリンクがそれぞれ表示される (FAILED - 1)[0m
     サイドバーの確認
 [32m      自分の名前と紹介文が表示される[0m
 [32m      自分のユーザ編集画面へのリンクが存在する[0m
@@ -230,7 +230,7 @@ Userモデルのテスト
     他人の投稿詳細画面のテスト
       表示内容の確認
 [32m        URLが正しい[0m
-[31m        「Book detail」と表示される (FAILED - 4)[0m
+[32m        「Book detail」と表示される[0m
 [32m        ユーザ画像・名前のリンク先が正しい[0m
 [32m        投稿のtitleが表示される[0m
 [32m        投稿のopinionが表示される[0m
@@ -242,7 +242,7 @@ Userモデルのテスト
 [32m        自分の名前と紹介文は表示されない[0m
 [32m        自分のユーザ編集画面へのリンクは存在しない[0m
     他人の投稿編集画面
-[31m      遷移できず、投稿一覧画面にリダイレクトされる (FAILED - 5)[0m
+[31m      遷移できず、投稿一覧画面にリダイレクトされる (FAILED - 2)[0m
     他人のユーザ詳細画面のテスト
       表示の確認
 [32m        URLが正しい[0m
@@ -285,27 +285,12 @@ Userモデルのテスト
 
 Failures:
 
-  1) [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
-     [31mFailure/Error: expect(page).to have_content 'Book detail'[0m
-     [31m  expected to find text "Book detail" in "Bookers\nHome Users Books Log out\nUser info\nname agoczx67ua introduction beo903qkpzc1o7na9dtk\nNew book\nTitle\nOpinion\nBooks detail\nagoczx67ua q4cy6 ppp02u6mpvep7jl51bta Edit Destroy\n　\nCopyRight Infratop.inc"[0m
-     [36m# ./spec/system/02_after_login_spec.rb:118:in `block (4 levels) in <main>'[0m
-
-  2) [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト リダイレクト先が、更新した投稿の詳細画面になっている
-     [31mFailure/Error: expect(page).to have_content 'Book detail'[0m
-     [31m  expected to find text "Book detail" in "Bookers\nHome Users Books Log out\nYou have updated book successfully.\nUser info\nname u2nxsyy88z introduction 6n3br5fsyakl937waiu7\nNew book\nTitle\nOpinion\nBooks detail\nu2nxsyy88z zzgm ac8eaumflyl0r5m8wv7 Edit Destroy\n　\nCopyRight Infratop.inc"[0m
-     [36m# ./spec/system/02_after_login_spec.rb:253:in `block (4 levels) in <main>'[0m
-
-  3) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される
+  1) [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される
      [31mFailure/Error: expect(page).to have_link 'Show', href: user_path(user)[0m
      [31m  expected to find link "Show" with href "/users/2" but there were no matches[0m
      [36m# ./spec/system/02_after_login_spec.rb:275:in `block (4 levels) in <main>'[0m
 
-  4) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される
-     [31mFailure/Error: expect(page).to have_content 'Book detail'[0m
-     [31m  expected to find text "Book detail" in "Bookers\nHome Users Books Log out\nUser info\nname zcyo7w1109 introduction rxv1fumaa3301ve5a6qq\nNew book\nTitle\nOpinion\nBooks detail\nzcyo7w1109 qsn4b 2buhzrhdko1yftjz5875\n　\nCopyRight Infratop.inc"[0m
-     [36m# ./spec/system/03_finishing_touches_spec.rb:223:in `block (5 levels) in <main>'[0m
-
-  5) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる
+  2) [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる
      [31mFailure/Error: expect(current_path).to eq '/books'[0m
      [31m[0m
      [31m  expected: "/books"[0m
@@ -314,14 +299,11 @@ Failures:
      [31m  (compared using ==)[0m
      [36m# ./spec/system/03_finishing_touches_spec.rb:263:in `block (4 levels) in <main>'[0m
 
-Finished in 29.9 seconds (files took 0.97159 seconds to load)
-[31m199 examples, 5 failures[0m
+Finished in 29.85 seconds (files took 1 second to load)
+[31m199 examples, 2 failures[0m
 
 Failed examples:
 
-[31mrspec ./spec/system/02_after_login_spec.rb:117[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される[0m
-[31mrspec ./spec/system/02_after_login_spec.rb:251[0m [36m# [STEP2] ユーザログイン後のテスト 自分の投稿編集画面のテスト 編集成功のテスト リダイレクト先が、更新した投稿の詳細画面になっている[0m
 [31mrspec ./spec/system/02_after_login_spec.rb:274[0m [36m# [STEP2] ユーザログイン後のテスト ユーザ一覧画面のテスト 表示内容の確認 自分と他人のshowリンクがそれぞれ表示される[0m
-[31mrspec ./spec/system/03_finishing_touches_spec.rb:222[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿詳細画面のテスト 表示内容の確認 「Book detail」と表示される[0m
 [31mrspec ./spec/system/03_finishing_touches_spec.rb:261[0m [36m# [STEP3] 仕上げのテスト 他人の画面のテスト 他人の投稿編集画面 遷移できず、投稿一覧画面にリダイレクトされる[0m
 
